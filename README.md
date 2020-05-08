@@ -1,1 +1,1 @@
-# week-6--oop-base
+# Richard Stibbard - Week 6 - PHP Interfaces
