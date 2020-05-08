@@ -13,7 +13,7 @@ class Challenges
         // load challenges
         $this->shapes();
         $this->extrude();
-        //   $this->library();
+        $this->library();
 
         // $tricksy = new Tricksy();
         // $tricksy->start();
@@ -65,23 +65,25 @@ class Challenges
         }
     }
 
-    //     public function library()
-    //     {
-    //         echo "\n03) Library\n";
+    public function library()
+    {
+        echo "\n03) Library\n";
 
-    //         $shelf = new Library\Shelf();
-    //         $shelf->addItem(new Library\Book("Zero: The Biography of a Dangerous Idea", 256));
-    //         $shelf->addItem(new Library\DVD("Hunt for the Wilderpeople"));
-    //         $shelf->addItem(new Library\CD("Teal Album"));
+        $shelf = new Library\Shelf();
+        $shelf->addItem(new Library\Book("Zero: The Biography of a Dangerous Idea", 256));
 
-    //         $otherShelf = new Library\Shelf();
-    //         $otherShelf->addItem(new Library\Book("The Power Broker", 1336));
-    //         $otherShelf->addItem(new Library\DVD("Black Sheep"));
+        $shelf->addItem(new Library\DVD("Hunt for the Wilderpeople"));
+        $shelf->addItem(new Library\CD("Teal Album"));
 
-    //         $library = new Library\Library();
-    //         $library->addShelf($shelf);
-    //         $library->addShelf($otherShelf);
+        $otherShelf = new Library\Shelf();
+        $otherShelf->addItem(new Library\Book("The Power Broker", 1336));
+        $otherShelf->addItem(new Library\DVD("Black Sheep"));
 
-    //         dump($library->titles()); // array:5 [ 0 => "Zero: The Biography of a Dangerous Idea" 1 => "Hunt for the Wilderpeople" 2 => "Teal Album" 3 => "The Power Broker" 4 => "Black Sheep" ]
-    //     }
+        $library = new Library\Library();
+        $library->addShelf($shelf);
+
+        $library->addShelf($otherShelf);
+
+        dump($library->titles()); // array:5 [ 0 => "Zero: The Biography of a Dangerous Idea" 1 => "Hunt for the Wilderpeople" 2 => "Teal Album" 3 => "The Power Broker" 4 => "Black Sheep" ]
+    }
 }
