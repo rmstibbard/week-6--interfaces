@@ -2,7 +2,7 @@
 
 namespace App\Shapes;
 
-class Circle implements ShapeInterface
+class Circle implements ShapeInterface // Circle class MUST contain 'public function area'
 {
     private $radius;
 

@@ -14,17 +14,6 @@ class Book implements Titled
         $this->pages = $pages;
     }
 
-    // public function read($value): int
-    // {
-    //     $this->current += $value;
-    //     return $this->current;
-    // }
-
-    // public function currentPage(): int
-    // {
-    //     return $this->current;
-    // }
-
     public function title(): string
     {
         return $this->title;

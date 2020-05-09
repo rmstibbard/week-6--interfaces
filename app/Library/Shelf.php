@@ -12,7 +12,6 @@ class Shelf
         return $this;
     }
 
-
     public function titles(): array
     {
         $names = [];  // Use a different name than "titles"
